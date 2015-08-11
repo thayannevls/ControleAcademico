@@ -27,24 +27,24 @@ public class School {
 	/*
 	 * Method that add a student into a list os students
 	 */
-	public boolean addStudent(Student student){
+	public void addStudent(Student student)throws Exception{
 		if(find(student))
-			return false;
+			throw new Exception("This Studient already exists.");
 		else
 			students.add(student);
-		return true;
+		
 	}
 	
 	/*
 	 * Method that remove a student into a list os students
 	 */
-	public boolean removeStudent(Student student){
+	public void removeStudent(Student student) throws Exception{
 		int pos = findPos(student);
 		if(pos == -1)
-			return false;
+			throw new Exception("This studient don't exists.");
 		else
 			students.remove(pos);
-		return true;
+		
 			
 	}
 	
