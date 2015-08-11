@@ -9,15 +9,20 @@ package controleAcademico;
 public class Teacher {
 	private String name;
 	/*
-	 * Constructor da classe Teacher - Inicia os arrayLists e os atributos da classe
+	 * Teacher's Class constructors 
+	 * 
+	 * @param name - New teacher's name
 	 */
 	public Teacher(String name){
 		this.name = name;
 	}
 	
+	public Teacher(){
+		
+	}
 	
 	/*
-	 * Getters e Setters dos atributos da Classe
+	 * Get and set 
 	 */
 	public String getName() {
 		return name;

@@ -10,12 +10,14 @@ import java.util.*;
 
 public class School {
 	private ArrayList<Student> students = new ArrayList<Student>();
-	private ArrayList<Subject> subjects = new ArrayList<Subject>();
 	private ArrayList<Teacher> teachers = new ArrayList<Teacher>();
+	private ArrayList<Subject> subjects = new ArrayList<Subject>();
 	
 	public School(){
 		
 	}
+	
+	/*                               STUDENT'S METHODS                          */
 	
 	public  void showStudents(){
 		for(int p = 0; p < students.size(); p++)
@@ -68,12 +70,75 @@ public class School {
 		for(int p = 0; p < students.size(); p++){
 			if(student == students.get(p))
 				return p;
-		
 		}
 		
 		return -1;
 	}
 	
+	/*                               TEACHER'S METHODS                                 */
+	
+	/*
+	 * Teachers' list
+	 */
+	public void showTeachers() throws Exception{
+			if (!teachers.isEmpty())
+		    	for (int i=0; i < teachers.size(); i++){
+		    		System.out.println(teachers.get(i) + "\n");
+		    	}
+		    else
+		    	throw new Exception ("There are no teachers registereds.");
+    }
+	/*
+	 * Teacher's register method, adding his name into a list of teachers
+	 */
+	public void teacherRegistration(Teacher t1) throws Exception{
+		if(!find(t1))
+			teachers.add(t1);
+		else
+			throw new Exception("Teacher is already registered!"); 
+	}
+	
+	/*
+	 * Find Method - returns boolean - if the teacher is found, return true; 
+	 * if it's not, return false
+	 *  
+	 */
+	public boolean find(Teacher t1){
+		for(int p = 0; p < students.size(); p++){
+			if(students.equals(students.get(p)))
+				return true;
+		
+		}
+		return false;
+	}
+	/*
+	 * Find Method - returns int - if it's found, return the position
+	 * if it's not, returns -1 
+	 */
+	public int findPos(Teacher t1){
+		for (int i=0; i < teachers.size(); i++){
+			if(t1.equals(teachers.get(i))){	
+				return i;
+			}
+		}
+		return -1;
+	}
+	/*
+	 * Remove Method - Delete a register by the indication of the teacher's name
+	 */
+	public void removeTeacher(Teacher t1) throws Exception{
+		if (findPos(t1) != -1)	
+			teachers.remove(findPos(t1));
+		else
+			throw new Exception("Teacher not found!");
+	}
+	
+	
+	
+
+
+	
+/*                               SUBJECT'S METHODS                                 */
 
 	
 }
