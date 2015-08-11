@@ -9,6 +9,12 @@ public class Student {
 	private String name;
 	private ArrayList<Subject> roll = new ArrayList();
 	
+	
+	
+	public Student(String name){
+		this.name = name;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -21,9 +27,34 @@ public class Student {
 		return roll.get(index);
 	}
 	
+	
+	/*
+	 * Method that add a new subject in roll of the Student
+	 *  if the subject it's not already registrat in the roll will be added.
+	 */
 	public void setRoll(Subject subject) {
-		roll.add(subject);
+		boolean exist = false;
+		for(int p = 0; p < roll.size(); p++){
+			Subject aux = roll.get(p);
+			if(aux.equals(subject))
+				exist = true;
+		}
+		if(exist)
+			roll.add(subject);
+		
 	}
 	
+	/*
+	 * Equals that just compare the names of the students
+	 */
+	public boolean equals(Student student){
+		if(this.name == student.name)
+			return true;
+		return false;
+	}
+	
+	public String toString(){
+		return "Name: " + getName();
+	}
 	
 }
