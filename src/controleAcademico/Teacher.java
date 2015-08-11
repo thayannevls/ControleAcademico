@@ -19,8 +19,8 @@ public class Teacher {
 	/*
 	 * Getters e Setters dos atributos da Classe
 	 */
-		public String getName() {
-			return name;
+	public String getName() {
+		return name;
 	}
 
 
