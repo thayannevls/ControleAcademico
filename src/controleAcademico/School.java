@@ -104,8 +104,8 @@ public class School {
 	 *  
 	 */
 	public boolean find(Teacher t1){
-		for(int p = 0; p < students.size(); p++){
-			if(students.equals(students.get(p)))
+		for(int p = 0; p < teachers.size(); p++){
+			if(teachers.equals(teachers.get(p)))
 				return true;
 		
 		}
