@@ -7,7 +7,7 @@ package controleAcademico;
 import java.util.Scanner;
 
 public class TeacherMenuUI {
-
+	
 
 	/*
 	 * Choices of teacher's menu
