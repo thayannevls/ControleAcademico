@@ -1,7 +1,7 @@
 /*
- * Autor: Rebeca Galdino
- * Data: 10/08/2015
- * Classe Teacher do projeto Controle Academico - Manipula dados dos professores cadastrados, bem como cadastra novos.
+ * Author: Rebeca Galdino
+ * Date: 09/08/2015
+ * Teacher Class from Controle Academico project - Hold the teacher's attributes, the method to verify the names and the toString Method
  */
 package controleAcademico;
 
