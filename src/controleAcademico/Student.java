@@ -48,8 +48,9 @@ public class Student {
 	 * Equals that just compare the names of the students
 	 */
 	public boolean equals(Student student){
-		if(this.name == student.name)
+		if(this.name.equals( student.name)){
 			return true;
+		}
 		return false;
 	}
 	

@@ -68,7 +68,7 @@ public class School {
 	
 	public int findPos(Student student){
 		for(int p = 0; p < students.size(); p++){
-			if(student == students.get(p))
+			if(student.equals(students.get(p)))
 				return p;
 		}
 		
