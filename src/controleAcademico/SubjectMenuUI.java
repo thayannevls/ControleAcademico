@@ -7,9 +7,23 @@ import java.util.*;
 public class SubjectMenuUI {
 	
 
+	
+	public static void initialize(School school){
+		try{
+			do{
+			System.out.println("What do you want?");
+			System.out.println(" 1 - Consult  2 - Add Subject  3 - Remove Subject 4 - Back To Menu ");
+			
+			}while(SubjectMenuUI.choice(school));
+		} catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+	}
+	
 	/*
 	 * Choices of subject's menu
 	 */
+	
 	
 	public static boolean choice(School school) throws Exception{
 		try{
@@ -42,6 +56,8 @@ public class SubjectMenuUI {
 			return false;
 		}
 	}
+	
+	
 	
 	
 
