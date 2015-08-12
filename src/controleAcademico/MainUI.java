@@ -15,6 +15,7 @@ public class MainUI {
 		String op = sc.nextLine();
 		switch(op){
 			case "1" :
+				SubjectMenu.initialize(school);
 				break;
 			case "2" :
 				break;

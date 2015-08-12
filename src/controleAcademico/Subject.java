@@ -23,14 +23,14 @@ public class Subject {
 		
 
 		public boolean equals(Subject subject){
-			if(this.name == subject.name)
+			if(this.name.equals(subject.name))
 				return true;
 			return false;
 		}
 		
 	
 		public String toString() {
-			return "Subject's names --> " + name;
+			return  getName();
 		}
 		
 }

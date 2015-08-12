@@ -170,7 +170,7 @@ public class School {
 /**
  * Print the Subjects' list	
  */
-	public  void showSubjects(){
+	public void showSubjects(){
 		for(int p = 0; p < subjects.size(); p++)
 			System.out.println(subjects.get(p));
 	}
@@ -219,7 +219,7 @@ public class School {
  */
 	public int findPos(Subject subject){
 		for(int p = 0; p < subjects.size(); p++){
-			if(subject == subjects.get(p))
+			if(subject.equals(subjects.get(p)))
 				return p;
 		}
 		
