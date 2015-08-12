@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Student {
 	private String name;
-	private ArrayList<Subject> roll = new ArrayList();
+	private ArrayList<Subject> roll = new ArrayList<Subject>();
 	
 	
 	
@@ -23,8 +23,13 @@ public class Student {
 		this.name = name;
 	}
 	
-	public Subject getRoll(int index) {
-		return roll.get(index);
+	public ArrayList<Subject>  getRoll() {
+		return roll;
+	}
+	
+	public void showRoll(){
+		for(int p = 0; p < roll.size(); p++)
+			System.out.println("Subject " + p + ": " + ( roll.get(p) ) );
 	}
 	
 	
@@ -56,7 +61,9 @@ public class Student {
 	}
 
 	public String toString(){
-		return "Name: " + getName();
+		return  getName();
 	}
+	
+	
 	
 }

@@ -27,7 +27,9 @@ public class StudentMenuUI {
 					System.out.println("Type the name of the studient that you want to remove: ");
 					school.removeStudent(new Student(sc.nextLine()));
 					return true;
-				
+				case "4":
+					matriculation(school);
+					return true;
 				default:
 					MainUI.choice(school);
 					return false;
@@ -38,7 +40,9 @@ public class StudentMenuUI {
 			return false;
 		}
 	}
-	
+	/*
+	 * Menu for consult
+	 */
 	public static void choiceConsult(School school) throws Exception{
 		try{
 			
@@ -46,6 +50,8 @@ public class StudentMenuUI {
 			String op = sc.nextLine();
 			switch(op){
 				case "1": 
+					System.out.println("Type the name of student: ");
+					school.searchStudent(new Student(sc.nextLine()));
 					break;
 				case "2":
 					school.showStudents();
@@ -55,7 +61,28 @@ public class StudentMenuUI {
 			}
 		
 		}catch(Exception e){
-		e.getMessage();
+			System.out.println(e.getMessage());
+		}
 	}
+	
+	/*
+	 * Method  with registry student on subject
+	 */
+	
+	public static void matriculation(School school){
+		
+		try {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Type the name of the Student: ");
+			Student student = new Student( sc.nextLine());
+			System.out.println("Type the name of the Subject: ");
+			Subject subject = new Subject( sc.nextLine() ) ;
+			school.matriculation(student, subject);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		
 	}
+	
 }

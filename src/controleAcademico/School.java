@@ -20,7 +20,7 @@ public class School {
 
 	public  void showStudents(){
 		for(int p = 0; p < students.size(); p++)
-			System.out.println(students.get(p));
+			System.out.println("Name: " + students.get(p));
 	}
 	
 	/*
@@ -73,6 +73,33 @@ public class School {
 		
 		return -1;
 	}
+	
+	/*
+	 * Method that registry a subject on student's roll
+	 */
+	
+	public void matriculation(Student student , Subject subject) throws Exception{
+		boolean exists = find(subject);
+		if(exists)
+			student.setRoll(subject);
+		else
+			throw new Exception("This subject doesn't exist.");
+	}
+	/*
+	 * Method witch search student on array
+	 */
+	public void searchStudent(Student student) throws Exception{
+		int pos = findPos(student);
+		if(pos != -1){
+			System.out.println(student);
+			System.out.println("The roll's" + (students.get(pos)) + ": ");
+			(students.get(pos)).showRoll();		
+			
+		}
+		else
+			throw new Exception("This Student doesn't exist.");
+	}
+	
 	
 	/*                               TEACHER'S METHODS                                 */
 	
