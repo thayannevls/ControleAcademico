@@ -47,16 +47,14 @@ public class Student {
 	/*
 	 * Equals that just compare the names of the students
 	 */
-<<<<<<< HEAD
+
 	public boolean equals(Student student){
 		if(this.name.equals( student.name)){
 			return true;
 		}
 		return false;
 	}
-=======
->>>>>>> 5eafc086a41c41a883d20aa93a4520b83068d42d
-	
+
 	public String toString(){
 		return "Name: " + getName();
 	}
