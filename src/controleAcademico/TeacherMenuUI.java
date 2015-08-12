@@ -57,7 +57,7 @@ public class TeacherMenuUI {
 			switch(op){
 				case "1": 
 					System.out.println("Type the name of the teacher: ");
-					school.searchTeacher(new Teacher(sc.nextLine()));
+					System.out.println(school.searchTeacher(new Teacher(sc.nextLine())));
 					break;
 				case "2":
 					school.showTeachers();
