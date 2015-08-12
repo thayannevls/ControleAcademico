@@ -1,5 +1,4 @@
-/*
- * Authors: Thayanne, Rebeca and Eddie
+/*Authors: Thayanne, Rebeca and Eddie
  * Date: 11/08/2015
  * 
  * Class that unites all the students, subjects and teachers; and have the methods to manipulate it.
@@ -18,7 +17,7 @@ public class School {
 	}
 	
 	/*                               STUDENT'S METHODS                          */
-	
+
 	public  void showStudents(){
 		for(int p = 0; p < students.size(); p++)
 			System.out.println(students.get(p));
@@ -140,5 +139,43 @@ public class School {
 	
 /*                               SUBJECT'S METHODS                                 */
 
+	
+	public  void showSubjects(){
+		for(int p = 0; p < subjects.size(); p++)
+			System.out.println(subjects.get(p));
+	}
+	
+	public void subjectRegistration(Subject subject)throws Exception{
+		if(find(subject))
+			throw new Exception("This subject already exists.");
+		else
+			subjects.add(subject);	
+	}
+	
+	public void removeSubject(Subject subject) throws Exception{
+		int pos = findPos(subject);
+		if(pos == -1)
+			throw new Exception("This subject don't exists.");
+		else
+			subjects.remove(pos);		
+	}
+	
+	public  boolean find(Subject subject){
+		for(int p = 0; p < subjects.size(); p++){
+			if(subject.equals(subjects.get(p)))
+				return true;
+		
+		}
+		return false;
+	}
+	
+	public int findPos(Subject subject){
+		for(int p = 0; p < subjects.size(); p++){
+			if(subject == subjects.get(p))
+				return p;
+		}
+		
+		return -1;
+	}
 	
 }

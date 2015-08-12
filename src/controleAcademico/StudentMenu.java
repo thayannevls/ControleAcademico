@@ -1,6 +1,7 @@
 package controleAcademico;
 
 public class StudentMenu {
+<<<<<<< HEAD
 	
 	public static void initialize(School school){
 		try{
@@ -15,4 +16,6 @@ public class StudentMenu {
 		}
 	}
 	
+=======
+>>>>>>> 5eafc086a41c41a883d20aa93a4520b83068d42d
 }
