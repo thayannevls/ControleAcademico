@@ -1,6 +1,7 @@
 /*
  * Author: Thayanne Luiza
  * Date: 11/08/2015
+ * Student's class that contains methods of students
  */
 package controleAcademico;
 import java.util.*;

@@ -1,4 +1,5 @@
-/*Authors: Thayanne, Rebeca and Eddie
+/*
+ * Authors: Thayanne, Rebeca and Eddie
  * Date: 11/08/2015
  * 
  * Class that unites all the students, subjects and teachers; and have the methods to manipulate it.

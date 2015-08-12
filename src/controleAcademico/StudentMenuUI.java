@@ -1,9 +1,15 @@
+/*
+ * Author: Thayanne Luiza
+ * Date: 11/08/2015
+ */
 package controleAcademico;
 import java.util.*;
 public class StudentMenuUI {
 	
 
-	
+	/*
+	 * Choices of student's menu
+	 */
 	
 	public static boolean choice(School school) throws Exception{
 		try{

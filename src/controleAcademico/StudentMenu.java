@@ -1,8 +1,14 @@
+/*
+ * Author: Thayanne Luiza
+ * Date: 11/08/2015
+ */
 package controleAcademico;
 
 public class StudentMenu {
 
-	
+	/*
+	 * initialize menu of student
+	 */
 	public static void initialize(School school){
 		try{
 			do{
