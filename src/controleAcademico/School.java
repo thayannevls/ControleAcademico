@@ -167,11 +167,18 @@ public class School {
 	
 /*                               SUBJECT'S METHODS                                 */
 
-	
+/**
+ * Print the Subjects' list	
+ */
 	public  void showSubjects(){
 		for(int p = 0; p < subjects.size(); p++)
 			System.out.println(subjects.get(p));
 	}
+/**
+ * Method that register a new subject, but if the name of the subject already exists it's impossible register it.
+ * @param subject
+ * @throws Exception
+ */
 	
 	public void subjectRegistration(Subject subject)throws Exception{
 		if(find(subject))
@@ -179,6 +186,11 @@ public class School {
 		else
 			subjects.add(subject);	
 	}
+/**
+ * Method that remove one subject that exists on subjects' list.
+ * @param subject
+ * @throws Exception
+ */
 	
 	public void removeSubject(Subject subject) throws Exception{
 		int pos = findPos(subject);
@@ -187,7 +199,11 @@ public class School {
 		else
 			subjects.remove(pos);		
 	}
-	
+/**
+ * Method that look for the subject and return if exists (true) or not (false).
+ * @param subject
+ * @return
+ */
 	public  boolean find(Subject subject){
 		for(int p = 0; p < subjects.size(); p++){
 			if(subject.equals(subjects.get(p)))
@@ -196,7 +212,11 @@ public class School {
 		}
 		return false;
 	}
-	
+/**
+ * Method that look for the subject's position inside the list of subjects. 
+ * @param subject
+ * @return
+ */
 	public int findPos(Subject subject){
 		for(int p = 0; p < subjects.size(); p++){
 			if(subject == subjects.get(p))
@@ -205,5 +225,6 @@ public class School {
 		
 		return -1;
 	}
+	
 	
 }
