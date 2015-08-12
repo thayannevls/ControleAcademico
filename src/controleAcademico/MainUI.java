@@ -11,7 +11,7 @@ public class MainUI {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("WELCOME!");
 		System.out.println("Selecet the session that you want to go: ");
-		System.out.println("1 - Subjects 2 - Teachers 3 - Studients 4 - Exit");
+		System.out.println("1 - Subjects 2 - Teachers 3 - Students 4 - Exit");
 		String op = sc.nextLine();
 		switch(op){
 			case "1" :
