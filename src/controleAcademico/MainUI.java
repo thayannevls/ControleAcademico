@@ -18,6 +18,7 @@ public class MainUI {
 				SubjectMenu.initialize(school);
 				break;
 			case "2" :
+				TeacherMenu.initialize(school);
 				break;
 			case "3" :
 				StudentMenu.initialize(school);
