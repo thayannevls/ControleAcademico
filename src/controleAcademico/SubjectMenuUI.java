@@ -1,5 +1,5 @@
 /*
- * Author: Thayanne Luiza
+ * Author: Thayanne Luiza / Eddie 
  * Date: 11/08/2015
  */
 package controleAcademico;
@@ -8,7 +8,7 @@ public class SubjectMenuUI {
 	
 
 	/*
-	 * Choices of student's menu
+	 * Choices of subject's menu
 	 */
 	
 	public static boolean choice(School school) throws Exception{
@@ -42,49 +42,8 @@ public class SubjectMenuUI {
 			return false;
 		}
 	}
-	/*
-	 * Menu for consult
-	 */
-	public static void choiceConsult(School school) throws Exception{
-		try{
-			
-			Scanner sc = new Scanner(System.in);
-			String op = sc.nextLine();
-			switch(op){
-				case "1": 
-					System.out.println("Type the name of student: ");
-					school.searchStudent(new Student(sc.nextLine()));
-					break;
-				case "2":
-					school.showStudents();
-					break;
-				default:
-					break;
-			}
-		
-		}catch(Exception e){
-			System.out.println(e.getMessage());
-		}
-	}
 	
-	/*
-	 * Method  with registry student on subject
-	 */
 	
-	public static void matriculation(School school){
-		
-		try {
-			Scanner sc = new Scanner(System.in);
-			System.out.println("Type the name of the Student: ");
-			Student student = new Student( sc.nextLine());
-			System.out.println("Type the name of the Subject: ");
-			Subject subject = new Subject( sc.nextLine() ) ;
-			school.matriculation(student, subject);
-		} catch (Exception e) {
-			
-			e.printStackTrace();
-		}
-		
-	}
+
 	
 }

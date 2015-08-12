@@ -93,8 +93,9 @@ public class School {
 		int pos = findPos(student);
 		if(pos != -1){
 			System.out.println(student);
-			System.out.println("The roll's" + (students.get(pos)) + ": ");
-			(students.get(pos)).showRoll();		
+			System.out.println("The roll's "  + ": ");
+			students.get(pos).showRoll();
+					
 			
 		}
 		else

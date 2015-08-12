@@ -24,13 +24,13 @@ public class Student {
 		this.name = name;
 	}
 	
-	public ArrayList<Subject>  getRoll() {
-		return roll;
+	public Subject getRoll(int index) {
+		return roll.get(index);
 	}
 	
 	public void showRoll(){
 		for(int p = 0; p < roll.size(); p++)
-			System.out.println("Subject " + p + ": " + ( roll.get(p) ) );
+			System.out.println("Subject " + p + " : " + getRoll(p));
 	}
 	
 	
@@ -38,17 +38,19 @@ public class Student {
 	 * Method that add a new subject in roll of the Student
 	 *  if the subject it's not already registrat in the roll will be added.
 	 */
-	public void setRoll(Subject subject) {
+	public void setRoll(Subject subject) throws Exception{
 		boolean exist = false;
 		for(int p = 0; p < roll.size(); p++){
 			Subject aux = roll.get(p);
 			if(aux.equals(subject))
 				exist = true;
 		}
-		if(exist)
+		if(!exist)
 			roll.add(subject);
-		
+		else
+			throw new Exception ("This student is already registered in the subject");
 	}
+
 	
 	/*
 	 * Equals that just compare the names of the students

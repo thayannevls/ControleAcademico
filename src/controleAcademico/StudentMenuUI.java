@@ -52,12 +52,13 @@ public class StudentMenuUI {
 	public static void choiceConsult(School school) throws Exception{
 		try{
 			
+			Scanner l = new Scanner(System.in);
 			Scanner sc = new Scanner(System.in);
 			String op = sc.nextLine();
 			switch(op){
 				case "1": 
 					System.out.println("Type the name of student: ");
-					school.searchStudent(new Student(sc.nextLine()));
+					school.searchStudent(new Student(l.nextLine()));
 					break;
 				case "2":
 					school.showStudents();
