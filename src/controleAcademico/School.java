@@ -41,7 +41,7 @@ public class School {
 	public void removeStudent(Student student) throws Exception{
 		int pos = findPos(student);
 		if(pos == -1)
-			throw new Exception("This studient don't exists.");
+			throw new Exception("This student don't exists.");
 		else
 			students.remove(pos);
 		
