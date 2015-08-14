@@ -5,8 +5,10 @@
  */
 package controleAcademico;
 public class TeacherMenu {
-	/*
+	/**
 	 * initialize menu of teacher
+	 * 
+	 * @param Object from type School, which is going to lead until this menu
 	 */
 	public static void initialize(School school){
 		try{

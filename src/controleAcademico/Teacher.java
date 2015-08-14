@@ -8,7 +8,7 @@ package controleAcademico;
 
 public class Teacher {
 	private String name;
-	/*
+	/**
 	 * Teacher's Class constructors 
 	 * 
 	 * @param name - New teacher's name
@@ -21,28 +21,36 @@ public class Teacher {
 		
 	}
 	
-	/*
-	 * Get and set 
+	/**
+	 * GetName Method
+	 * 
+	 * @return The teacher's name
 	 */
 	public String getName() {
 		return name;
 	}
 
-
+   /**
+    * SetName Method
+    * @param name wich is inserted by the user 
+    */
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	/*
-	 * toString
+	/**
+	 * toString method
 	 */
 	public String toString(){
 		return getName() + "\n";
 	}
 
 	
-
+    /*
+     * Equals Method
+     * @see java.lang.Object#equals(java.lang.Object)
+     */
 
 	@Override
 	public boolean equals(Object obj) {
