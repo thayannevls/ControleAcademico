@@ -34,7 +34,7 @@ public class Subject {
 		
 	
 		public String toString() {
-			return  getName();
+			return   getName();
 		}
 		
 }

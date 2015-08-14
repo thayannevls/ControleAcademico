@@ -21,7 +21,7 @@ public class MainUI {
 				TeacherMenuUI.initialize(school);
 				break;
 			case "3" :
-				StudentMenu.initialize(school);
+				StudentMenuUI.initialize(school);
 				break;
 			case "4":
 				break;

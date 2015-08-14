@@ -8,7 +8,7 @@ import java.util.*;
 
 public class Student {
 	private String name;
-	private ArrayList<Subject> roll = new ArrayList<Subject>();
+	private ArrayList<Subject> courses = new ArrayList<Subject>();
 	
 	
 	
@@ -24,29 +24,34 @@ public class Student {
 		this.name = name;
 	}
 	
-	public Subject getRoll(int index) {
-		return roll.get(index);
+	public Subject getCourses(int index) {
+		return courses.get(index);
 	}
 	
-	public void showRoll(){
-		for(int p = 0; p < roll.size(); p++)
-			System.out.println("Subject " + p + " : " + getRoll(p));
+	public void showCourses(){
+		for(int p = 1; p < courses.size() ; p++){
+			Subject course = getCourses(p - 1);
+			System.out.println("Subject " + p + " : " + course);
+		}
 	}
 	
+	public int getSize(){
+		return courses.size();
+	}
 	
 	/*
-	 * Method that add a new subject in roll of the Student
-	 *  if the subject it's not already registrat in the roll will be added.
+	 * Method that add a new subject in courses of the Student
+	 *  if the subject it's not already registered in the courses will be added.
 	 */
-	public void setRoll(Subject subject) throws Exception{
+	public void setCourses(Subject subject) throws Exception{
 		boolean exist = false;
-		for(int p = 0; p < roll.size(); p++){
-			Subject aux = roll.get(p);
+		for(int p = 0; p < courses.size(); p++){
+			Subject aux = courses.get(p);
 			if(aux.equals(subject))
 				exist = true;
 		}
 		if(!exist)
-			roll.add(subject);
+			courses.add(subject);
 		else
 			throw new Exception ("This student is already registered in the subject");
 	}

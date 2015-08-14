@@ -18,7 +18,11 @@ public class School {
 	}
 	
 	/*                               STUDENT'S METHODS                          */
-
+	
+	public Student getStudents(int index){
+		return students.get(index);
+	}
+	
 	public  void showStudents(){
 		for(int p = 0; p < students.size(); p++)
 			System.out.println("Name: " + students.get(p));
@@ -29,7 +33,7 @@ public class School {
 	 */
 	public void addStudent(Student student)throws Exception{
 		if(find(student))
-			throw new Exception("This Studient already exists.");
+			throw new Exception("This Student already exists.");
 		else
 			students.add(student);
 		
@@ -76,15 +80,16 @@ public class School {
 	}
 	
 	/*
-	 * Method that registry a subject on student's roll
+	 * Method that registry a subject on student's courses
 	 */
 	
-	public void matriculation(Student student , Subject subject) throws Exception{
-		boolean exists = find(subject);
-		if(exists)
-			student.setRoll(subject);
+	public void registry(Student student , Subject subject) throws Exception{
+		boolean  existsStudent = find(student);
+		boolean existsSubject = find(subject);
+		if((existsSubject) && (existsStudent))
+			student.setCourses(subject);
 		else
-			throw new Exception("This subject doesn't exist.");
+			throw new Exception("This subject or student doesn't exist.");
 	}
 	/*
 	 * Method witch search student on array
@@ -93,10 +98,10 @@ public class School {
 		int pos = findPos(student);
 		if(pos != -1){
 			System.out.println(student);
-			System.out.println("The roll's "  + ": ");
-			students.get(pos).showRoll();
-					
-			
+			System.out.println("Courses:  ");
+			for(int p = 0; p < students.get(pos).getSize(); p++)
+				System.out.println(students.get(pos).getCourses(p));
+	
 		}
 		else
 			throw new Exception("This Student doesn't exist.");
@@ -200,6 +205,11 @@ public class School {
 		for(int p = 0; p < subjects.size(); p++)
 			System.out.println(subjects.get(p));
 	}
+	
+	public Subject getSubject(int index){
+		return subjects.get(index);
+	}
+	
 	/**
 	 * Method that register a new subject, but if the name of the subject already exists it's impossible register it.
 	 * @param subject

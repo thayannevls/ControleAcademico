@@ -10,7 +10,7 @@ public class Teste {
 			school.addStudent(estudante);
 		
 			school.subjectRegistration(matematica);
-			school.matriculation(estudante, matematica);
+			school.registry(estudante, matematica);
 			school.searchStudent(new Student(sc.nextLine()));
 
 		} catch (Exception e) {
