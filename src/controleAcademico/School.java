@@ -106,7 +106,7 @@ public class School {
 	/*                               TEACHER'S METHODS                                 */
 	
 	/**
-	 * Teachers' list
+	 * Print the teachers' list
 	 * 
 	 * @throws Message if there are no teachers yet.
 	 */
