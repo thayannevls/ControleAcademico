@@ -1,2 +1,2 @@
 # ControleAcademico
-Controle academico de alunos, professores e disciplinas. 
+Academic control for teachers and students, recording subjects and administering the files.  
