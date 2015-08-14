@@ -22,7 +22,7 @@ public class TeacherMenuUI {
 			
 			}while(TeacherMenuUI.choice(school));
 		} catch(Exception e){
-			System.out.println(e.getMessage());
+			System.err.println(e.getMessage());
 		}
 	}
 
@@ -56,13 +56,13 @@ public class TeacherMenuUI {
 					school.removeTeacher(new Teacher(sc.nextLine()));
 					return true;
 				default:
-					MainUI.choice(school);
+					Main.choice(school);
 					return false;
 					
 			}
 		}catch(Exception e){
-			System.out.println(e.getMessage());
-			return false;
+			System.err.println(e.getMessage());
+			return true;
 		}
 	}
 	
@@ -89,7 +89,7 @@ public class TeacherMenuUI {
 			}
 		
 		}catch(Exception e){
-			System.out.println(e.getMessage());
+			System.err.println(e.getMessage());
 		}
 	}
 	

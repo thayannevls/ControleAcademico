@@ -100,7 +100,7 @@ public class School {
 			System.out.println(student);
 			System.out.println("Courses:  ");
 			for(int p = 0; p < students.get(pos).getSize(); p++)
-				System.out.println(students.get(pos).getCourses(p));
+				System.out.println("        " + students.get(pos).getCourses(p));
 	
 		}
 		else
@@ -131,10 +131,10 @@ public class School {
 	 * @throws Exception if the teacher is already on the list.
 	 */
 	public void teacherRegistration(Teacher t1) throws Exception{
-		if(!find(t1))
-			teachers.add(t1);
-		else
+		if(find(t1))
 			throw new Exception("Teacher is already registered!"); 
+		else
+			teachers.add(t1); 
 	}
 	
 	/**

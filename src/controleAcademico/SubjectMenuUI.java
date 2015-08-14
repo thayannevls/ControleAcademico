@@ -16,7 +16,7 @@ public class SubjectMenuUI {
 			
 			}while(SubjectMenuUI.choice(school));
 		} catch(Exception e){
-			System.out.println(e.getMessage());
+			System.err.println(e.getMessage());
 		}
 	}
 	
@@ -47,13 +47,13 @@ public class SubjectMenuUI {
 					school.removeSubject(new Subject(sc.nextLine()));
 					return true;
 				default:
-					MainUI.choice(school);
+					Main.choice(school);
 					return false;
 					
 			}
 		}catch(Exception e){
-			System.out.println(e.getMessage());
-			return false;
+			System.err.println(e.getMessage());
+			return true;
 		}
 	}
 	

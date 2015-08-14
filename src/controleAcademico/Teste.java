@@ -12,7 +12,7 @@ public class Teste {
 			school.subjectRegistration(matematica);
 			school.registry(estudante, matematica);
 			school.searchStudent(new Student(sc.nextLine()));
-
+			System.err.println("oi");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
