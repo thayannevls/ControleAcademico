@@ -1,6 +1,6 @@
-/*
- * Authors: Thayanne, Rebeca and Eddie
- * Date: 11/08/2015
+/**
+ * @authors Thayanne, Rebeca and Eddie
+ * @date 11/08/2015
  * 
  * Class that unites all the students, subjects and teachers; and have the methods to manipulate it.
  */
@@ -105,8 +105,10 @@ public class School {
 	
 	/*                               TEACHER'S METHODS                                 */
 	
-	/*
+	/**
 	 * Teachers' list
+	 * 
+	 * @throws Message if there are no teachers yet.
 	 */
 	public void showTeachers() throws Exception{
 			if (!teachers.isEmpty())
@@ -116,8 +118,12 @@ public class School {
 		    else
 		    	throw new Exception ("There are no teachers registereds.");
     }
-	/*
+	
+	/**
 	 * Teacher's register method, adding his name into a list of teachers
+	 * 
+	 * @param Object from type teacher, holding a name and his informations
+	 * @throws Exception if the teacher is already on the list.
 	 */
 	public void teacherRegistration(Teacher t1) throws Exception{
 		if(!find(t1))
@@ -126,10 +132,11 @@ public class School {
 			throw new Exception("Teacher is already registered!"); 
 	}
 	
-	/*
-	 * Find Method - returns boolean - if the teacher is found, return true; 
-	 * if it's not, return false
-	 *  
+	/**
+	 * Find Method 
+	 *
+	 * @param Object from type teacher
+	 * @return boolean - if the teacher is found, return true, if it's not, return false  
 	 */
 	public boolean find(Teacher t1){
 		for(int p = 0; p < teachers.size(); p++){
@@ -139,9 +146,12 @@ public class School {
 		}
 		return false;
 	}
-	/*
-	 * Find Method - returns int - if it's found, return the position
-	 * if it's not, returns -1 
+	
+	/**
+	 * Find Method 
+	 * 
+	 * @param Object from type teacher
+	 * @return int - if it's found, return the position, if it's not, returns -1 
 	 */
 	public int findPos(Teacher t1){
 		for (int i=0; i < teachers.size(); i++){
@@ -151,8 +161,11 @@ public class School {
 		}
 		return -1;
 	}
-	/*
-	 * Remove Method - Delete a register by the indication of the teacher's name
+	/**
+	 * Remove Method - Delete a register 
+	 * 
+	 * @param Object from type teacher 
+	 * @throws Message if teacher doens't exist
 	 */
 	public void removeTeacher(Teacher t1) throws Exception{
 		if (findPos(t1) != -1)	
@@ -161,8 +174,11 @@ public class School {
 			throw new Exception("Teacher not found!");
 	}
 	
-	/*
-	 * Method witch search teacher on array
+	/**
+	 * Method that search a teacher on the array
+	 * 
+	 * @param Object from type teacher 
+	 * @throws Message if teacher doens't exist
 	 */
 	public String searchTeacher(Teacher teacher) throws Exception{
 		if (findPos(teacher) != -1){

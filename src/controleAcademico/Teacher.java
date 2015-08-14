@@ -1,6 +1,6 @@
-/*
- * Author: Rebeca Galdino
- * Date: 09/08/2015
+/**
+ * @author Rebeca Galdino
+ * @date 09/08/2015
  * Teacher Class from Controle Academico project - Hold the teacher's attributes, the method to verify the names and the toString Method
  */
 package controleAcademico;
@@ -47,8 +47,8 @@ public class Teacher {
 	}
 
 	
-    /*
-     * Equals Method
+    /**
+     * Equals Method - verify the field name
      * @see java.lang.Object#equals(java.lang.Object)
      */
 
