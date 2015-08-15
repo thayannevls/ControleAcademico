@@ -131,10 +131,10 @@ public class School {
 	 * @throws Exception if the teacher is already on the list.
 	 */
 	public void teacherRegistration(Teacher t1) throws Exception{
-		if(find(t1))
-			throw new Exception("Teacher is already registered!"); 
+		if(findPos(t1) != -1)
+			throw new Exception("Teacher is already registered!");
 		else
-			teachers.add(t1); 
+		    teachers.add(t1);
 	}
 	
 	/**

@@ -17,9 +17,6 @@ public class Teacher {
 		this.name = name;
 	}
 	
-	public Teacher(){
-		
-	}
 	
 	/**
 	 * GetName Method
@@ -32,7 +29,7 @@ public class Teacher {
 
    /**
     * SetName Method
-    * @param name wich is inserted by the user 
+    * @param name which is inserted by the user 
     */
 
 	public void setName(String name) {
@@ -43,7 +40,7 @@ public class Teacher {
 	 * toString method
 	 */
 	public String toString(){
-		return getName() + "\n";
+		return getName();
 	}
 
 	
@@ -52,23 +49,12 @@ public class Teacher {
      * @see java.lang.Object#equals(java.lang.Object)
      */
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
+	public boolean equals(Teacher teacher){
+		if(this.name.equals(teacher.name)){
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Teacher other = (Teacher) obj;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		return true;
+		}
+		return false;
 	}
-
 
 
 	
