@@ -86,7 +86,7 @@ public class School {
 	public void registry(Student student , Subject subject) throws Exception{
 		boolean  existsStudent = find(student);
 		boolean existsSubject = find(subject);
-		if((existsSubject) && (existsStudent))
+		if( (existsSubject) && (existsStudent))
 			student.setCourses(subject);
 		else
 			throw new Exception("This subject or student doesn't exist.");
