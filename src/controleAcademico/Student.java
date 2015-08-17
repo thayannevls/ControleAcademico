@@ -6,23 +6,20 @@
 package controleAcademico;
 import java.util.*;
 
-public class Student {
-	private String name;
+public class Student extends Person{
+	
 	private ArrayList<Subject> courses = new ArrayList<Subject>();
 	
-	
+	public Student(String name, String cpf, String birthDate, String gender) {
+		super(name,cpf,birthDate,gender);
+	}
 	
 	public Student(String name){
-		this.name = name;
+		super(name);
 	}
+
 	
-	public String getName() {
-		return name;
-	}
 	
-	public void setName(String name) {
-		this.name = name;
-	}
 	
 	public Subject getCourses(int index) {
 		return courses.get(index);
@@ -62,7 +59,7 @@ public class Student {
 	 */
 
 	public boolean equals(Student student){
-		if(this.name.equals( student.name)){
+		if(this.getName().equals( student.getName())){
 			return true;
 		}
 		return false;
