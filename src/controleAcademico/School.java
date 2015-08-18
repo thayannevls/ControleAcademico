@@ -130,11 +130,22 @@ public class School {
 	 * @param Object from type teacher, holding a name and his informations
 	 * @throws Exception if the teacher is already on the list.
 	 */
-	public void teacherRegistration(Teacher t1) throws Exception{
+	public void teacherRegistration() throws Exception{
+		Scanner s = new Scanner(System.in);
+		String name = s.nextLine();
+		Teacher t1 = new Teacher(name);
 		if(findPos(t1) != -1)
 			throw new Exception("Teacher is already registered!");
-		else
-		    teachers.add(t1);
+		else {
+			System.out.println("Type the teacher's cpf: ");
+			String cpf = s.nextLine();
+			System.out.println("Type the teacher's birth date: ");
+			String bd = s.nextLine();
+			System.out.println("Type the teacher's gender: ");
+			String gender = s.nextLine();
+			teachers.add(new Teacher(name,cpf,bd,gender));
+		}
+		    
 	}
 	
 	/**

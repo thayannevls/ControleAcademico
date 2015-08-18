@@ -48,7 +48,7 @@ public class TeacherMenuUI {
 					
 				case "2":
 					System.out.println("Type a name: ");
-					school.teacherRegistration(new Teacher(sc.nextLine()));
+					school.teacherRegistration();
 					return true;
 					
 				case "3":
