@@ -110,6 +110,10 @@ public class School {
 	
 	/*                               TEACHER'S METHODS                                 */
 	
+	public Teacher getTeachers(int index){
+		return teachers.get(index);
+	}
+	
 	/**
 	 * Print the teachers' list
 	 * 
@@ -196,15 +200,31 @@ public class School {
 	 * @param Object from type teacher 
 	 * @throws Message if teacher doens't exist
 	 */
-	public String searchTeacher(Teacher teacher) throws Exception{
-		if (findPos(teacher) != -1){
-			return "This teacher is registrated.";
+	public void searchTeacher(Teacher t) throws Exception{
+		int pos = findPos(t);
+		if(pos != -1){
+			System.out.println(t);
+			System.out.println("Courses:  ");
+			for(int p = 0; p < teachers.get(pos).getSize(); p++)
+				System.out.println("        " + teachers.get(pos).getCourses(p));
+	
 		}
 		else
 			throw new Exception("This Teacher doesn't exist.");
 	}
-	
 
+	/*
+	 * Method that registry a subject on teacher's courses
+	 */
+	
+	public void registry(Teacher teacher , Subject subject) throws Exception{
+		boolean  existsTeacher = find(teacher);
+		boolean existsSubject = find(subject);
+		if( (existsSubject) && (existsTeacher))
+			teacher.setCourses(subject);
+		else
+			throw new Exception("This subject or student doesn't exist.");
+	}
 
 	
 /*                               SUBJECT'S METHODS                                 */

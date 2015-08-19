@@ -18,7 +18,7 @@ public class TeacherMenuUI {
 			do{
 			
 			System.out.println("What do you want?");
-			System.out.println(" 1 - Consult  2 - Add Teacher  3 - Remove Teacher 4 - Back To Menu ");
+			System.out.println(" 1 - Consult  2 - Add Teacher  3 - Remove Teacher 4 - Register Teacher's Subject 5 - Back To Menu ");
 			
 			}while(TeacherMenuUI.choice(school));
 		} catch(Exception e){
@@ -55,6 +55,9 @@ public class TeacherMenuUI {
 					System.out.println("Type the name of the teacher that you want to remove: ");
 					school.removeTeacher(new Teacher(sc.nextLine()));
 					return true;
+				case "4":
+					registryUI(school);
+					return true;
 				default:
 					Main.choice(school);
 					return false;
@@ -79,7 +82,7 @@ public class TeacherMenuUI {
 			switch(op){
 				case "1": 
 					System.out.println("Type the name of the teacher: ");
-					System.out.println(school.searchTeacher(new Teacher(sc.nextLine())));
+					school.searchTeacher(new Teacher(sc.nextLine()));
 					break;
 				case "2":
 					school.showTeachers();
@@ -93,7 +96,29 @@ public class TeacherMenuUI {
 		}
 	}
 	
+	/*
+	 * Method  with registry subject on teacher's own list
+	 */
 	
+	public static void registryUI(School school){
+		
+		try {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Type the teacher's name: ");
+			Teacher teacher = new Teacher( sc.nextLine());
+			int posT = school.findPos(teacher);
+			System.out.println("Type the name of the Subject: ");
+			Subject subject = new Subject( sc.nextLine() ) ;
+			int posSubject = school.findPos(subject);
+			if( (posT != -1) && (posSubject != -1)){
+				school.registry(school.getTeachers(posT), school.getSubject(posSubject));
+			}
+		} catch (Exception e) {
+			
+			System.err.println(e.getMessage());
+		}
+		
+	}
 	
 
 }
