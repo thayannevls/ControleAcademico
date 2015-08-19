@@ -1,5 +1,5 @@
 /**
- * @author Rebeca Galdino
+ * @author Rebeca Galdino and Thayanne Luiza
  * @date 12/08/2015
  * TeacherMenuUI Class from Controle Academico project - Show the interactions with the user and call the methods chosen
  */
